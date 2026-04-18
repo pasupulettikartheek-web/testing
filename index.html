@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Lavanya 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      color: #ff4e50;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .fade {
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    video {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container fade" id="screen1">
+    <h1>Hey Lavanya 💖</h1>
+    <p>I made something for you...</p>
+    <button onclick="nextScreen(1)">Click Me</button>
+  </div>
+
+  <div class="container hidden" id="screen2">
+    <h2>Before we start... 🎈</h2>
+    <p>This is not just a birthday page...</p>
+    <button onclick="nextScreen(2)">Continue</button>
+  </div>
+
+  <div class="container hidden" id="screen3">
+    <h2>It's a small journey 💫</h2>
+    <p>Through moments, smiles, and memories...</p>
+    <button onclick="nextScreen(3)">Let's Go</button>
+  </div>
+
+  <div class="container hidden" id="screen4">
+    <h2>Some Things About You 😊</h2>
+    <p>✨ You make everything brighter</p>
+    <p>✨ Your smile = instant happiness</p>
+    <p>✨ You’re rare, don’t forget that</p>
+    <button onclick="nextScreen(4)">Next</button>
+  </div>
+
+  <div class="container hidden" id="screen5">
+    <h2>Memories 📸</h2>
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <p>(Replace these with your real photos)</p>
+    <button onclick="nextScreen(5)">Next</button>
+  </div>
+
+  <div class="container hidden" id="screen6">
+    <h2>More Memories 💖</h2>
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+    <img src="https://picsum.photos/300?6">
+    <button onclick="nextScreen(6)">Next</button>
+  </div>
+
+  <div class="container hidden" id="screen7">
+    <h2>Videos 🎥</h2>
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+    <p>(Upload your videos and replace names)</p>
+    <button onclick="nextScreen(7)">Next</button>
+  </div>
+
+  <div class="container hidden" id="screen8">
+    <h2>Random Thoughts 💭</h2>
+    <p>Life feels lighter when you're around</p>
+    <p>Every moment becomes a memory with you</p>
+    <p>You're one of those people I’m really glad I met</p>
+    <button onclick="nextScreen(8)">Next</button>
+  </div>
+
+  <div class="container hidden" id="screen9">
+    <h2>Final Message 🎂</h2>
+    <p>Happy Birthday Lavanya ❤️</p>
+    <p>I hope this year brings you everything you deserve and more.</p>
+    <p>And yeah… stay the amazing person you are.</p>
+  </div>
+
+  <script>
+    function nextScreen(current) {
+      document.getElementById('screen' + current).classList.add('hidden');
+      document.getElementById('screen' + (current + 1)).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
